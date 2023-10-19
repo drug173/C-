@@ -1,0 +1,24 @@
+diff a/naznachenie1/Form1.cs b/naznachenie1/Form1.cs	(rejected hunks)
+@@ -84,13 +84,18 @@
+         private void button1_Click(object sender, EventArgs e)
+         {
+             Static.matr1 = Static.Matr(grid1, Static.colEnd);
+-            Static.matr2 = Static.Matr(grid2, Static.colEnd);
+-            FormEnd newForm = new FormEnd();
++            if (Static.flagMatr == true)
++            {
++                Static.matr2 = Static.Matr(grid2, Static.colEnd);
++                if (Static.flagMatr == true)
++                {
++                    FormEnd newForm = new FormEnd();
+ 
+ 
+-            newForm.Show();
++                    newForm.Show();
++                }
++            }
+         }
+-
+         private void tabPage2_Click(object sender, EventArgs e)
+         {
+ 
